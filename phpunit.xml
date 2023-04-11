@@ -25,18 +25,17 @@
         <log type="testdox-text" target="./build/logs/testdox.txt"/>
     </logging>
 
-       <coverage processUncoveredFiles="true">
-        <include>
-            <directory suffix=".php">src</directory>
-        </include>
-        <report>
-            <clover outputFile="./reports/coverage_clover.xml"/>
-        </report>
-    </coverage>
-
-    <logging>
-        <junit outputFile="reports/junit.xml"/>
-    </logging>
+      
 -->
+
+     <filter>
+    <whitelist processUncoveredFilesFromWhitelist="true">
+      <directory suffix=".php">src</directory>
+    </whitelist>
+  </filter>
+
+  <logging>
+    <log type="coverage-clover" target="coverage.xml" />
+  </logging>
 
 </phpunit>
