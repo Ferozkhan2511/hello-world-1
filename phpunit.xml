@@ -34,4 +34,8 @@
         </report>
     </coverage>
 
+    <logging>
+        <junit outputFile="reports/junit.xml"/>
+    </logging>
+
 </phpunit>
