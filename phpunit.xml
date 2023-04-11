@@ -24,7 +24,7 @@
         <log type="junit" target="./build/logs/junit.xml"/>
         <log type="testdox-text" target="./build/logs/testdox.txt"/>
     </logging>
--->
+
        <coverage processUncoveredFiles="true">
         <include>
             <directory suffix=".php">src</directory>
@@ -37,5 +37,6 @@
     <logging>
         <junit outputFile="reports/junit.xml"/>
     </logging>
+-->
 
 </phpunit>
