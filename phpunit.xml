@@ -7,7 +7,7 @@
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
          processIsolation="false">
-
+<!--
   <testsuites>
     <testsuite name="Hello World TestSuite">
       <directory>tests</directory>
@@ -23,5 +23,21 @@
   <logging>
     <log type="coverage-clover" target="coverage.xml" />
   </logging>
+-->
+          <testsuites>
+        <testsuite name="default">
+            <directory>tests/tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <coverage>
+        <include>
+            <directory suffix=".php">src</directory>
+        </include>
+    </coverage>
+
+    <php>
+        <ini name="serialize_precision" value="14"/>
+    </php>
 
 </phpunit>
